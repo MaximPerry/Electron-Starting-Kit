@@ -1,0 +1,9 @@
+{
+    "width" : 1000,
+    "height": 400,
+    "frame": true,
+    "windows10Frame": true,
+    "resizable": true,
+    "transparent": false,
+    "icon" : "assets/icons/Linux.png"
+}

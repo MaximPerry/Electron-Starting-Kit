@@ -1,1 +1,1 @@
-# Electron-Starting-Kit
+# Electron-Starter-Kit
