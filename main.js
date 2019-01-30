@@ -6,17 +6,39 @@ var BrowserWindow = electron.BrowserWindow;
 var mainWindow;
 
 var rawdata = fs.readFileSync('winProperties.json');  
-var windowProperties = JSON.parse(rawdata);
+var winProp = JSON.parse(rawdata);
 
 function createWindow () {
     mainWindow = new BrowserWindow({ 
-        width: windowProperties.width,
-        height: windowProperties.height,
-        frame: windowProperties.frame,
-        windows10Frame: windowProperties.windows10Frame,
-        resizable: windowProperties.resizable,
-        transparent: windowProperties.transparent,
-        icon: windowProperties.icon
+        width: winProp.width,
+        height: winProp.height,
+        frame: winProp.frame,
+        windows10Frame: winProp.windows10Frame,
+        resizable: winProp.resizable,
+        transparent: winProp.transparent,
+        icon: winProp.icon,
+        minWidth: winProp.minWidth,
+        minHeight: winProp.minHeight,
+        maxWidth: winProp.maxWidth,
+        maxHeight: winProp.maxHeight,
+        x: winProp.x,
+        y: winProp.y,
+        center: winProp.center,
+        movable: winProp.movable,
+        minimizable: winProp.minimizable,
+        maximizable: winProp.maximizable,
+        closable: winProp.closable,
+        alwaysOnTop: winProp.alwaysOnTop,
+        fullscreen: winProp.fullscreen,
+        skipTaskbar: winProp.skipTaskbar,
+        kiosk: winProp.kiosk,
+        title: winProp.title,
+        acceptFirstMouse: winProp.acceptFirstMouse,
+        autoHideMenuBar: winProp.autoHideMenuBar,
+        hasShadow: winProp.hasShadow,
+        opacity: winProp.opacity,
+        titleBarStyle: winProp.titleBarStyle,
+        fullscreenWindowTitle: winProp.fullscreenWindowTitle
     });
     mainWindow.setMenu(null);
     mainWindow.loadURL(`file://${__dirname}/index.html`);
